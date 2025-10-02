@@ -3,30 +3,33 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align to top */
+    align-items: flex-start;
     min-height: 100vh;
-    background-color: #121212;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('img/c8iu0_LyL3MfMvmg79QFAIYITjMLaGpW9knlMjaXPd8PEeyamyXkxIlbpijMKTqpjAzYYuJaidQoZfdih2GwZhUkuR3_phoU0JZN0-LN2LhwAKEIg0cBe_nZMFmlIZiZDDhVvp0hxZsdbgKD1f7pwGCP5JvlGXe9gReljxqltpY.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #game-container {
     text-align: center;
-    width: 800px; /* Adjust width to accommodate both elements */
+    width: 800px;
 }
 
 #center-panel {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items to the top */
-    gap: 30px; /* Space between leaderboard and game board */
+    align-items: flex-start;
+    gap: 30px;
     margin-top: 20px;
 }
 
 h1 {
     font-size: 3em;
     color: #00ffff;
-    text-shadow: 0 0 10px #00ffff;
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #00ffff;
 }
 
 #stats-container {
@@ -35,10 +38,11 @@ h1 {
     gap: 40px;
     margin-bottom: 20px;
     font-size: 1.5em;
+    text-shadow: 0 0 5px #000, 0 0 8px #000;
 }
 
 #hp-board span#hp {
-    color: #2ed573; /* Green color for HP */
+    color: #2ed573;
     font-weight: bold;
 }
 
@@ -46,7 +50,7 @@ h1 {
     display: flex;
     width: 400px;
     height: 600px;
-    background-color: #282828;
+    background-color: rgba(40, 40, 40, 0.75); /* Semi-transparent background */
     border: 3px solid #00ffff;
     border-radius: 10px;
     position: relative;
@@ -55,7 +59,7 @@ h1 {
 
 .lane {
     flex: 1;
-    border-left: 2px dashed #444;
+    border-left: 2px dashed rgba(255, 255, 255, 0.3);
     position: relative;
 }
 
@@ -69,7 +73,7 @@ h1 {
     width: 80%;
     height: 50px;
     left: 10%;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8);
     border: 2px solid #fff;
     border-radius: 5px;
     display: flex;
@@ -78,6 +82,7 @@ h1 {
     font-size: 1.5em;
     font-weight: bold;
     color: #fff;
+    text-shadow: 0 0 5px #000;
 }
 
 .key.active {
@@ -88,11 +93,11 @@ h1 {
 
 .note {
     position: absolute;
-    width: 50px; /* 이미지 크기에 맞게 조정 */
-    height: 50px; /* 이미지 크기에 맞게 조정 */
+    width: 50px;
+    height: 50px;
     left: 50%;
     transform: translateX(-50%);
-    top: -60px; /* Start above the board */
+    top: -60px;
     animation-timing-function: linear;
 }
 
@@ -101,7 +106,7 @@ h1 {
         top: -60px;
     }
     to {
-        top: 600px; /* Fall to the bottom of the board */
+        top: 600px;
     }
 }
 
@@ -119,19 +124,19 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.2s ease;
+    color: #fff;
+    font-weight: bold;
 }
 
 #start-button {
-    color: #121212;
-    background-color: #00ffff;
+    background-color: #00a8ff;
 }
 
 #start-button:hover {
-    box-shadow: 0 0 15px #00ffff;
+    box-shadow: 0 0 15px #00a8ff;
 }
 
 #stop-button {
-    color: #ffffff;
     background-color: #ff4757;
 }
 
@@ -140,7 +145,6 @@ h1 {
 }
 
 #creator-mode-button {
-    color: #ffffff;
     background-color: #9c88ff;
 }
 
@@ -155,26 +159,28 @@ h1 {
 }
 
 #leaderboard {
-    margin: 0; /* Remove auto margin */
+    margin: 0;
     width: 300px;
     padding: 15px;
     border: 2px solid #00ffff;
     border-radius: 10px;
-    background-color: #282828;
+    background-color: rgba(40, 40, 40, 0.75); /* Semi-transparent background */
 }
 
 #leaderboard h2 {
     margin-top: 0;
     font-size: 1.8em;
     color: #00ffff;
+    text-shadow: 0 0 5px #000, 0 0 8px #000;
 }
 
 #rank-list {
     list-style-type: none;
     padding: 0;
-    max-height: 480px; /* Adjust height */
+    max-height: 480px;
     overflow-y: auto;
     font-size: 1.2em;
+    text-shadow: 0 0 5px #000;
 }
 
 #rank-list li {
