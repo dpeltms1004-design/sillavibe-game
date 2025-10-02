@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#game-container {
+    text-align: center;
+    width: 800px; /* Adjust width to accommodate both elements */
+}
+
+#center-panel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    gap: 30px; /* Space between leaderboard and game board */
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+#stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+#hp-board span#hp {
+    color: #2ed573; /* Green color for HP */
+    font-weight: bold;
+}
+
+#game-board {
+    display: flex;
+    width: 400px;
+    height: 600px;
+    background-color: #282828;
+    border: 3px solid #00ffff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.lane {
+    flex: 1;
+    border-left: 2px dashed #444;
+    position: relative;
+}
+
+.lane:first-child {
+    border-left: none;
+}
+
+.key {
+    position: absolute;
+    bottom: 10px;
+    width: 80%;
+    height: 50px;
+    left: 10%;
+    background-color: #333;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.key.active {
+    background-color: #00ffff;
+    color: #121212;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+.note {
+    position: absolute;
+    width: 50px; /* 이미지 크기에 맞게 조정 */
+    height: 50px; /* 이미지 크기에 맞게 조정 */
+    left: 50%;
+    transform: translateX(-50%);
+    top: -60px; /* Start above the board */
+    animation-timing-function: linear;
+}
+
+@keyframes fall {
+    from {
+        top: -60px;
+    }
+    to {
+        top: 600px; /* Fall to the bottom of the board */
+    }
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#start-button, #stop-button, #creator-mode-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#start-button {
+    color: #121212;
+    background-color: #00ffff;
+}
+
+#start-button:hover {
+    box-shadow: 0 0 15px #00ffff;
+}
+
+#stop-button {
+    color: #ffffff;
+    background-color: #ff4757;
+}
+
+#stop-button:hover {
+    box-shadow: 0 0 15px #ff4757;
+}
+
+#creator-mode-button {
+    color: #ffffff;
+    background-color: #9c88ff;
+}
+
+#creator-mode-button:hover {
+    box-shadow: 0 0 15px #9c88ff;
+}
+
+#start-button:disabled, #stop-button:disabled, #creator-mode-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#leaderboard {
+    margin: 0; /* Remove auto margin */
+    width: 300px;
+    padding: 15px;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    background-color: #282828;
+}
+
+#leaderboard h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #00ffff;
+}
+
+#rank-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 480px; /* Adjust height */
+    overflow-y: auto;
+    font-size: 1.2em;
+}
+
+#rank-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #444;
+}
+
+#rank-list li:last-child {
+    border-bottom: none;
+}

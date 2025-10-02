@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silla Vibe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Silla Vibe Game</h1>
+        <div id="stats-container">
+            <div id="score-board">
+                <span>점수: </span><span id="score">0</span>
+            </div>
+            <div id="hp-board">
+                <span>HP: </span><span id="hp">8</span>
+            </div>
+        </div>
+        <div id="center-panel">
+            <div id="leaderboard">
+                <h2>🏆 순위 🏆</h2>
+                <ol id="rank-list"></ol>
+            </div>
+            <div id="game-board">
+                <div class="lane" data-lane="0"><div class="key">A</div></div>
+                <div class="lane" data-lane="1"><div class="key">S</div></div>
+                <div class="lane" data-lane="2"><div class="key">D</div></div>
+                <div class="lane" data-lane="3"><div class="key">F</div></div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="start-button">게임 시작</button>
+            <button id="stop-button">게임 정지</button>
+            <button id="creator-mode-button">채보 만들기</button>
+        </div>
+    </div>
+    <audio id="game-audio" src="music/lucid.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
